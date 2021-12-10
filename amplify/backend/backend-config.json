@@ -1,8 +1,31 @@
 {
-	"auth": {
-		"cognitocf0c6096": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation"
-		}
-	}
+  "auth": {
+    "cognitocf0c6096": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "function": {
+    "assetApi": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "api": {
+    "assetsApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "assetApi",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
+  }
 }

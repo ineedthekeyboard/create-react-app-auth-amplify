@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/assets-api": {
+      "name": "/assets-api",
+      "lambdaFunction": "assetApi",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}
