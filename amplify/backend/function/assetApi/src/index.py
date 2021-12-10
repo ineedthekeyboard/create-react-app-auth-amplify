@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from werkzeug.http import parse_options_header
 from flask_serverless import aws_invoke
 
+ALLOW_CORS = True
+
 app = Flask(__name__)
 
 
@@ -28,6 +30,7 @@ def assets_get():
 
 @app.route('/assets-api/echo', methods=['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'OPTIONS'])
 def assets_echo():
+    headers = dict(request.headers)
     obj = {
         'method': request.method,
         'headers': dict(request.headers)
@@ -40,4 +43,4 @@ def assets_echo():
 
 
 def handler(event, context):
-    return aws_invoke(app, event, block_headers=False)
+    return aws_invoke(app, event, block_headers=False, cors=ALLOW_CORS)
