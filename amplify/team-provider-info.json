@@ -19,7 +19,7 @@
       "function": {
         "assetApi": {
           "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
-          "s3Key": "amplify-builds/assetApi-4b4b564d622f4e703345-build.zip"
+          "s3Key": "amplify-builds/assetApi-4170532f733658753868-build.zip"
         }
       }
     }

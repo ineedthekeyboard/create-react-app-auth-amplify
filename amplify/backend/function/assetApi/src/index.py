@@ -32,7 +32,7 @@ def assets_get():
 def assets_echo():
     headers = dict(request.headers)
     obj = {
-        'method': request.method,
+        'method': headers,
         'headers': dict(request.headers)
     }
     if request.method == 'POST' or request.method == 'PUT':
