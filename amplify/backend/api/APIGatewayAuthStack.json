@@ -11,10 +11,7 @@
     "env": {
       "Type": "String"
     },
-    "assetsApi": {
-      "Type": "String"
-    },
-    "testcors1": {
+    "exampleendpoint": {
       "Type": "String"
     }
   },
@@ -55,7 +52,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -67,7 +64,7 @@
                           }
                         ]
                       },
-                      "/POST/assets-api/*"
+                      "/POST/exampleendpoint/*"
                     ]
                   ]
                 },
@@ -85,7 +82,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -97,7 +94,7 @@
                           }
                         ]
                       },
-                      "/POST/assets-api"
+                      "/POST/exampleendpoint"
                     ]
                   ]
                 },
@@ -115,7 +112,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -127,7 +124,7 @@
                           }
                         ]
                       },
-                      "/GET/assets-api/*"
+                      "/GET/exampleendpoint/*"
                     ]
                   ]
                 },
@@ -145,7 +142,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -157,7 +154,7 @@
                           }
                         ]
                       },
-                      "/GET/assets-api"
+                      "/GET/exampleendpoint"
                     ]
                   ]
                 },
@@ -175,7 +172,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -187,7 +184,7 @@
                           }
                         ]
                       },
-                      "/PUT/assets-api/*"
+                      "/PUT/exampleendpoint/*"
                     ]
                   ]
                 },
@@ -205,7 +202,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -217,7 +214,7 @@
                           }
                         ]
                       },
-                      "/PUT/assets-api"
+                      "/PUT/exampleendpoint"
                     ]
                   ]
                 },
@@ -235,7 +232,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -247,7 +244,7 @@
                           }
                         ]
                       },
-                      "/PATCH/assets-api/*"
+                      "/PATCH/exampleendpoint/*"
                     ]
                   ]
                 },
@@ -265,7 +262,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -277,7 +274,7 @@
                           }
                         ]
                       },
-                      "/PATCH/assets-api"
+                      "/PATCH/exampleendpoint"
                     ]
                   ]
                 },
@@ -295,7 +292,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -307,7 +304,7 @@
                           }
                         ]
                       },
-                      "/DELETE/assets-api/*"
+                      "/DELETE/exampleendpoint/*"
                     ]
                   ]
                 },
@@ -325,7 +322,7 @@
                       },
                       ":",
                       {
-                        "Ref": "assetsApi"
+                        "Ref": "exampleendpoint"
                       },
                       "/",
                       {
@@ -337,307 +334,7 @@
                           }
                         ]
                       },
-                      "/DELETE/assets-api"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/POST/corspy/*"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/POST/corspy"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/GET/corspy/*"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/GET/corspy"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/PUT/corspy/*"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/PUT/corspy"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/PATCH/corspy/*"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/PATCH/corspy"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/DELETE/corspy/*"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:execute-api:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":",
-                      {
-                        "Ref": "testcors1"
-                      },
-                      "/",
-                      {
-                        "Fn::If": [
-                          "ShouldNotCreateEnvResources",
-                          "Prod",
-                          {
-                            "Ref": "env"
-                          }
-                        ]
-                      },
-                      "/DELETE/corspy"
+                      "/DELETE/exampleendpoint"
                     ]
                   ]
                 }

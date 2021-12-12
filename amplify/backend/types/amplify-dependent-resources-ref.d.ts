@@ -11,13 +11,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "function": {
-        "assetApi": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        },
-        "corspy": {
+        "exampleendpoint": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
@@ -25,12 +19,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        "assetsApi": {
-            "RootUrl": "string",
-            "ApiName": "string",
-            "ApiId": "string"
-        },
-        "testcors1": {
+        "exampleendpoint": {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"

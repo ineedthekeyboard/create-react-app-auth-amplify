@@ -1,9 +1,9 @@
 {
   "version": 1,
   "paths": {
-    "/assets-api": {
-      "name": "/assets-api",
-      "lambdaFunction": "assetApi",
+    "/exampleendpoint": {
+      "name": "/exampleendpoint",
+      "lambdaFunction": "exampleendpoint",
       "permissions": {
         "setting": "private",
         "auth": [

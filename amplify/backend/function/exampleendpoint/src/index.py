@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_serverless import aws_invoke
+import json
 
 ALLOW_CORS = True
 
@@ -7,15 +8,15 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'HEAD', 'OPTIONS'])
-def assets_root():
+def root():
     return jsonify({
         "response": "Hello from root!"
     })
 
 
-@app.route('/corspy')
-@app.route('/corspy/', methods=['GET', 'HEAD', 'OPTIONS'])
-def assets_api_root():
+@app.route('/exampleendpoint', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
+@app.route('/exampleendpoint/', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
+def api_root():
     return jsonify({
         "response": "Hello from API!"
     })
@@ -24,7 +25,7 @@ def assets_api_root():
 def handler(event, context):
     print('received event:')
     print(event)
-    #
+
     # return {
     #     'statusCode': 200,
     #     'headers': {

@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "corspy",
+            "exampleendpoint",
             {
               "Fn::Join": [
                 "",
                 [
-                  "corspy",
+                  "exampleendpoint",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "createreactappauthamLambdaRolef9b7ba8d",
+            "createreactappauthamLambdaRole0b61c539",
             {
               "Fn::Join": [
                 "",
                 [
-                  "createreactappauthamLambdaRolef9b7ba8d",
+                  "createreactappauthamLambdaRole0b61c539",
                   "-",
                   {
                     "Ref": "env"
