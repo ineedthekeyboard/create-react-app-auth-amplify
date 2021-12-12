@@ -17,21 +17,9 @@
         "cognitocf0c6096": {}
       },
       "function": {
-        "assetApi": {
-          "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
-          "s3Key": "amplify-builds/assetApi-4e77464935744c673557-build.zip"
-        },
-        "corspy": {
-          "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
-          "s3Key": "amplify-builds/corspy-6e69426669384730302f-build.zip"
-        },
-        "testcors2": {
-          "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
-          "s3Key": "amplify-builds/testcors2-6559307177332b793731-build.zip"
-        },
         "exampleendpoint": {
           "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
-          "s3Key": "amplify-builds/exampleendpoint-364b5552346b67764f66-build.zip"
+          "s3Key": "amplify-builds/exampleendpoint-42556d4b657345723456-build.zip"
         }
       }
     }

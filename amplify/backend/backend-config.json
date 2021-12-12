@@ -6,21 +6,6 @@
     }
   },
   "function": {
-    "assetApi": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "corspy": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "testcors2": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
     "exampleendpoint": {
       "build": true,
       "providerPlugin": "awscloudformation",
