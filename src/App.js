@@ -9,7 +9,7 @@ Amplify.configure(aws_exports);
 
 function App() {
   let test = async () => {
-    let test = await axios.post('https://vooi7a3d5l.execute-api.us-east-1.amazonaws.com/devx/asset-api/echo', {'test': 'data'})
+    let test = await axios.get('https://kur3wux4q3.execute-api.us-east-1.amazonaws.com/devx/corspy')
     console.log(test)
   }
   return (

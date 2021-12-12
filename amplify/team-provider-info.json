@@ -19,7 +19,11 @@
       "function": {
         "assetApi": {
           "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
-          "s3Key": "amplify-builds/assetApi-4170532f733658753868-build.zip"
+          "s3Key": "amplify-builds/assetApi-33686266436b4e2f6a73-build.zip"
+        },
+        "corspy": {
+          "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
+          "s3Key": "amplify-builds/corspy-384878415855666e7975-build.zip"
         }
       }
     }
