@@ -20,7 +20,7 @@ function App() {
         "Authorization": `Bearer ${(await Auth.currentSession()).getIdToken().getJwtToken()}`
       }
     }
-    let test = await axios.get('https://kur3wux4q3.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint', params)
+    let test = await axios.get('https://kt9ts86de7.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint', params)
     console.log(test)
   }
   return (
