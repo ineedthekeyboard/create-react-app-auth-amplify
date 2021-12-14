@@ -14,10 +14,19 @@ Amplify.configure(aws_exports);
 // };
 
 function App() {
-  let test = async () => {
+  let testAccess = async () => {
     let params = {
       headers: {
         "Authorization": `Bearer ${(await Auth.currentSession()).getAccessToken().getJwtToken()}`
+      }
+    }
+    let otherTest = await API.get("exampleendpoint", "/exampleendpoint", params)
+    console.log(otherTest)
+  }
+  let testIdentity = async() => {
+    let params = {
+      headers: {
+        "Authorization": `Bearer ${(await Auth.currentSession()).getIdToken().getJwtToken()}`
       }
     }
     let otherTest = await API.get("exampleendpoint", "/exampleendpoint", params)
@@ -37,7 +46,8 @@ function App() {
       <AmplifySignOut />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={test}>Run Test Call</button>
+        <button onClick={testAccess}>Run Test Access Call</button>
+        <button onClick={testIdentity}>Run Test Identity Call</button>
         <button onClick={testAxios}>Run Axios Test Call</button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
