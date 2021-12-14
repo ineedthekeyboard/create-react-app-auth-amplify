@@ -20,10 +20,17 @@ function App() {
         "Authorization": `Bearer ${(await Auth.currentSession()).getAccessToken().getJwtToken()}`
       }
     }
-    let test = await axios.get('https://kt9ts86de7.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint', params)
-    console.log(test)
     let otherTest = await API.get("exampleendpoint", "/exampleendpoint", params)
     console.log(otherTest)
+  }
+  let testAxios = async () => {
+    let params = {
+      headers: {
+        "Authorization": `Bearer ${(await Auth.currentSession()).getAccessToken().getJwtToken()}`
+      }
+    }
+    let test = await axios.get('https://kt9ts86de7.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint', params)
+    console.log(test)
   }
   return (
     <div className="App">
@@ -31,6 +38,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <button onClick={test}>Run Test Call</button>
+        <button onClick={testAxios}>Run Axios Test Call</button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
