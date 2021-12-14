@@ -7,7 +7,6 @@ ALLOW_CORS = True
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET', 'HEAD', 'OPTIONS'])
 @app.route('/exampleendpoint', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
 @app.route('/exampleendpoint/', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
 def api_root():
@@ -19,15 +18,15 @@ def api_root():
 def handler(event, context):
     print('received event:')
     print(event)
+    #
+    # return {
+    #     'statusCode': 200,
+    #     'headers': {
+    #         'Access-Control-Allow-Headers': '*',
+    #         'Access-Control-Allow-Origin': '*',
+    #         'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+    #     },
+    #     'body': json.dumps('Hello from your new Amplify Python lambda!')
+    # }
 
-    return {
-        'statusCode': 200,
-        'headers': {
-            'Access-Control-Allow-Headers': '*',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
-        },
-        'body': json.dumps('Hello from your new Amplify Python lambda!')
-    }
-
-    # return aws_invoke(app, event, block_headers=False, cors=ALLOW_CORS)
+    return aws_invoke(app, event, block_headers=False, cors=ALLOW_CORS)
