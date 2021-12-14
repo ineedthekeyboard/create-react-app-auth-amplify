@@ -8,12 +8,6 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'HEAD', 'OPTIONS'])
-def root():
-    return jsonify({
-        "response": "Hello from root!"
-    })
-
-
 @app.route('/exampleendpoint', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
 @app.route('/exampleendpoint/', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
 def api_root():
