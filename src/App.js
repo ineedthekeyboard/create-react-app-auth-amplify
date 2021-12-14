@@ -2,7 +2,7 @@ import React, { Component, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
-import {Amplify, Auth} from 'aws-amplify';
+import {Amplify, Auth, API} from 'aws-amplify';
 import aws_exports from './aws-exports';
 import axios from 'axios'
 
@@ -22,6 +22,8 @@ function App() {
     }
     let test = await axios.get('https://kt9ts86de7.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint', params)
     console.log(test)
+    let otherTest = await API.get("exampleendpoint", "https://kt9ts86de7.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint", params)
+    console.log(otherTest)
   }
   return (
     <div className="App">
