@@ -17,12 +17,12 @@ function App() {
   let test = async () => {
     let params = {
       headers: {
-        "Authorization": `Bearer ${(await Auth.currentSession()).getIdToken().getJwtToken()}`
+        "Authorization": `Bearer ${(await Auth.currentSession()).getAccessToken().getJwtToken()}`
       }
     }
     let test = await axios.get('https://kt9ts86de7.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint', params)
     console.log(test)
-    let otherTest = await API.get("exampleendpoint", "https://kt9ts86de7.execute-api.us-east-1.amazonaws.com/devx/exampleendpoint", params)
+    let otherTest = await API.get("exampleendpoint", "/exampleendpoint", params)
     console.log(otherTest)
   }
   return (
