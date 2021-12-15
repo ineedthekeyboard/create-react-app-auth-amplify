@@ -8,10 +8,16 @@ app = Flask(__name__)
 
 
 @app.route('/exampleendpoint', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
-@app.route('/exampleendpoint/', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
 def api_root():
     return jsonify({
-        "response": "Hello from API!"
+        "response": "Hello from API Root!"
+    })
+
+
+@app.route('/exampleendpoint/', methods=['GET', 'HEAD', 'OPTIONS', 'POST'])
+def subroute():
+    return jsonify({
+        "response": "Hello from API subroute!"
     })
 
 

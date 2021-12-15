@@ -19,7 +19,7 @@
       "function": {
         "exampleendpoint": {
           "deploymentBucketName": "amplify-authcra-devx-152442-deployment",
-          "s3Key": "amplify-builds/exampleendpoint-4c6a3133552b64706e67-build.zip"
+          "s3Key": "amplify-builds/exampleendpoint-5370655731424c79687a-build.zip"
         }
       }
     }
